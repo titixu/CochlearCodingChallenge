@@ -17,7 +17,7 @@ class MapViewController: UIViewController {
     let mapView = MKMapView(frame: .zero)
     
     let locationManager = CLLocationManager()
-    let regionInMeters = 20000.0 //show most of the Sydney region
+    let regionInMeters = 2000.0 // init show 2km range
     
     // keep tracking of user newly added annotation
     // this is for showing the callout on add
@@ -60,7 +60,9 @@ class MapViewController: UIViewController {
     }
     
     @objc private func listButtonTapped() {
-        // TODO: go to list view controller
+        let locationsListViewModel = LocationsListViewModel(distantCalculator: locationManager, storage: viewModel.storage)
+        let viewController = LocationsListTableViewController(viewModel: locationsListViewModel)
+        navigationController?.pushViewController(viewController, animated: true)
     }
     
     @objc private func longPress(sender: UILongPressGestureRecognizer) {
@@ -70,7 +72,7 @@ class MapViewController: UIViewController {
             let point = sender.location(in: mapView)
             let coordinate = mapView.convert(point, toCoordinateFrom: mapView)
             
-            var location = Location(lat : coordinate.latitude,
+            var location = Location(lat: coordinate.latitude,
                                     lng: coordinate.longitude)
             
             let geo = CLGeocoder()
@@ -79,10 +81,9 @@ class MapViewController: UIViewController {
                     let name =
                         mark.thoroughfare ??
                         mark.subLocality ??
-                        mark.name ??
                         mark.locality ??
-                        mark.ocean
-                {
+                        mark.name ??
+                        mark.ocean {
                     location.name = name
                 }
                 let anno = LocationAnnotation(location: location)

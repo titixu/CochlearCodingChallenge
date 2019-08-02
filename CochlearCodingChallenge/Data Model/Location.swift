@@ -62,3 +62,9 @@ extension Location: Equatable {
         return lhs.id == rhs.id
     }
 }
+
+// data model for the Location List table view
+struct LocationDetail {
+    var location: Location
+    var distant: Double?
+}

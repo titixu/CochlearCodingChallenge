@@ -26,6 +26,10 @@
 		F7313A1E22F3CCFE0014FF99 /* LocationDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7313A1D22F3CCFE0014FF99 /* LocationDetailViewModel.swift */; };
 		F7313A2022F3CDF50014FF99 /* LocationDetailTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7313A1F22F3CDF50014FF99 /* LocationDetailTests.swift */; };
 		F7313A2222F3CE760014FF99 /* LocationDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7313A2122F3CE760014FF99 /* LocationDetailViewController.swift */; };
+		F7313A2422F3D2ED0014FF99 /* LocationsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7313A2322F3D2ED0014FF99 /* LocationsListViewModel.swift */; };
+		F7313A2622F3D4050014FF99 /* LocationListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7313A2522F3D4050014FF99 /* LocationListTests.swift */; };
+		F7313A2822F3D4E30014FF99 /* LocationsListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7313A2722F3D4E30014FF99 /* LocationsListTableViewController.swift */; };
+		F7313A2A22F3D5B60014FF99 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7313A2922F3D5B60014FF99 /* LocationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +66,10 @@
 		F7313A1D22F3CCFE0014FF99 /* LocationDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailViewModel.swift; sourceTree = "<group>"; };
 		F7313A1F22F3CDF50014FF99 /* LocationDetailTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailTests.swift; sourceTree = "<group>"; };
 		F7313A2122F3CE760014FF99 /* LocationDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailViewController.swift; sourceTree = "<group>"; };
+		F7313A2322F3D2ED0014FF99 /* LocationsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsListViewModel.swift; sourceTree = "<group>"; };
+		F7313A2522F3D4050014FF99 /* LocationListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationListTests.swift; sourceTree = "<group>"; };
+		F7313A2722F3D4E30014FF99 /* LocationsListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsListTableViewController.swift; sourceTree = "<group>"; };
+		F7313A2922F3D5B60014FF99 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +135,7 @@
 				F7313A0B22F3BB460014FF99 /* data.json */,
 				F7313A1322F3C0450014FF99 /* MapViewModelTest.swift */,
 				F7313A1F22F3CDF50014FF99 /* LocationDetailTests.swift */,
+				F7313A2522F3D4050014FF99 /* LocationListTests.swift */,
 			);
 			path = CochlearCodingChallengeTests;
 			sourceTree = "<group>";
@@ -146,6 +155,7 @@
 			children = (
 				F7313A1122F3BF8C0014FF99 /* MapViewModel.swift */,
 				F7313A1D22F3CCFE0014FF99 /* LocationDetailViewModel.swift */,
+				F7313A2322F3D2ED0014FF99 /* LocationsListViewModel.swift */,
 			);
 			path = "View model";
 			sourceTree = "<group>";
@@ -155,6 +165,7 @@
 			children = (
 				F7313A0D22F3BB8D0014FF99 /* Decoder.swift */,
 				F7313A0F22F3BEC80014FF99 /* APIClient.swift */,
+				F7313A2922F3D5B60014FF99 /* LocationManager.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -164,6 +175,7 @@
 			children = (
 				F7313A1622F3C2CE0014FF99 /* MapViewController.swift */,
 				F7313A2122F3CE760014FF99 /* LocationDetailViewController.swift */,
+				F7313A2722F3D4E30014FF99 /* LocationsListTableViewController.swift */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -293,7 +305,10 @@
 				F7313A1222F3BF8C0014FF99 /* MapViewModel.swift in Sources */,
 				F73139E522F3B5AF0014FF99 /* AppDelegate.swift in Sources */,
 				F7313A1922F3C3000014FF99 /* LocationAnnotation.swift in Sources */,
+				F7313A2A22F3D5B60014FF99 /* LocationManager.swift in Sources */,
 				F7313A1022F3BEC80014FF99 /* APIClient.swift in Sources */,
+				F7313A2822F3D4E30014FF99 /* LocationsListTableViewController.swift in Sources */,
+				F7313A2422F3D2ED0014FF99 /* LocationsListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,6 +318,7 @@
 			files = (
 				F7313A2022F3CDF50014FF99 /* LocationDetailTests.swift in Sources */,
 				F73139FA22F3B5B10014FF99 /* LocationTests.swift in Sources */,
+				F7313A2622F3D4050014FF99 /* LocationListTests.swift in Sources */,
 				F7313A1422F3C0450014FF99 /* MapViewModelTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
