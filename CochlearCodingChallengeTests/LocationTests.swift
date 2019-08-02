@@ -10,7 +10,7 @@ import XCTest
 @testable import CochlearCodingChallenge
 
 // load a file from the test bundle
-fileprivate func loadJsonFile(name: String, withExtension: String) -> Data? {
+func loadJsonFile(name: String, withExtension: String) -> Data? {
     let bundle = Bundle(for: LocationTests.self)
     let url = bundle.url(forResource: name, withExtension: withExtension)
     return try? Data(contentsOf: url!)

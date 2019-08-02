@@ -17,6 +17,12 @@
 		F7313A0A22F3B8BF0014FF99 /* LocationStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7313A0922F3B8BF0014FF99 /* LocationStorage.swift */; };
 		F7313A0C22F3BB460014FF99 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = F7313A0B22F3BB460014FF99 /* data.json */; };
 		F7313A0E22F3BB8D0014FF99 /* Decoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7313A0D22F3BB8D0014FF99 /* Decoder.swift */; };
+		F7313A1022F3BEC80014FF99 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7313A0F22F3BEC80014FF99 /* APIClient.swift */; };
+		F7313A1222F3BF8C0014FF99 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7313A1122F3BF8C0014FF99 /* MapViewModel.swift */; };
+		F7313A1422F3C0450014FF99 /* MapViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7313A1322F3C0450014FF99 /* MapViewModelTest.swift */; };
+		F7313A1722F3C2CE0014FF99 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7313A1622F3C2CE0014FF99 /* MapViewController.swift */; };
+		F7313A1922F3C3000014FF99 /* LocationAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7313A1822F3C3000014FF99 /* LocationAnnotation.swift */; };
+		F7313A1C22F3C9220014FF99 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7313A1B22F3C9220014FF99 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +50,12 @@
 		F7313A0922F3B8BF0014FF99 /* LocationStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationStorage.swift; sourceTree = "<group>"; };
 		F7313A0B22F3BB460014FF99 /* data.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 		F7313A0D22F3BB8D0014FF99 /* Decoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Decoder.swift; sourceTree = "<group>"; };
+		F7313A0F22F3BEC80014FF99 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		F7313A1122F3BF8C0014FF99 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
+		F7313A1322F3C0450014FF99 /* MapViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModelTest.swift; sourceTree = "<group>"; };
+		F7313A1622F3C2CE0014FF99 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		F7313A1822F3C3000014FF99 /* LocationAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationAnnotation.swift; sourceTree = "<group>"; };
+		F7313A1B22F3C9220014FF99 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7313A1C22F3C9220014FF99 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +83,7 @@
 				F73139E322F3B5AF0014FF99 /* CochlearCodingChallenge */,
 				F73139F822F3B5B10014FF99 /* CochlearCodingChallengeTests */,
 				F73139E222F3B5AF0014FF99 /* Products */,
+				F7313A1A22F3C9220014FF99 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -85,6 +99,7 @@
 		F73139E322F3B5AF0014FF99 /* CochlearCodingChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				F7313A1522F3C2A80014FF99 /* View Controller */,
 				F7313A0622F3B5D50014FF99 /* Helper */,
 				F7313A0522F3B5CC0014FF99 /* View model */,
 				F7313A0422F3B5C00014FF99 /* Data Model */,
@@ -104,6 +119,7 @@
 				F73139F922F3B5B10014FF99 /* LocationTests.swift */,
 				F73139FB22F3B5B10014FF99 /* Info.plist */,
 				F7313A0B22F3BB460014FF99 /* data.json */,
+				F7313A1322F3C0450014FF99 /* MapViewModelTest.swift */,
 			);
 			path = CochlearCodingChallengeTests;
 			sourceTree = "<group>";
@@ -113,6 +129,7 @@
 			children = (
 				F7313A0722F3B7B80014FF99 /* Location.swift */,
 				F7313A0922F3B8BF0014FF99 /* LocationStorage.swift */,
+				F7313A1822F3C3000014FF99 /* LocationAnnotation.swift */,
 			);
 			path = "Data Model";
 			sourceTree = "<group>";
@@ -120,6 +137,7 @@
 		F7313A0522F3B5CC0014FF99 /* View model */ = {
 			isa = PBXGroup;
 			children = (
+				F7313A1122F3BF8C0014FF99 /* MapViewModel.swift */,
 			);
 			path = "View model";
 			sourceTree = "<group>";
@@ -128,8 +146,25 @@
 			isa = PBXGroup;
 			children = (
 				F7313A0D22F3BB8D0014FF99 /* Decoder.swift */,
+				F7313A0F22F3BEC80014FF99 /* APIClient.swift */,
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		F7313A1522F3C2A80014FF99 /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F7313A1622F3C2CE0014FF99 /* MapViewController.swift */,
+			);
+			path = "View Controller";
+			sourceTree = "<group>";
+		};
+		F7313A1A22F3C9220014FF99 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F7313A1B22F3C9220014FF99 /* MapKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -182,6 +217,11 @@
 				TargetAttributes = {
 					F73139E022F3B5AF0014FF99 = {
 						CreatedOnToolsVersion = 10.3;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					F73139F422F3B5B10014FF99 = {
 						CreatedOnToolsVersion = 10.3;
@@ -238,7 +278,11 @@
 				F7313A0822F3B7B80014FF99 /* Location.swift in Sources */,
 				F7313A0A22F3B8BF0014FF99 /* LocationStorage.swift in Sources */,
 				F7313A0E22F3BB8D0014FF99 /* Decoder.swift in Sources */,
+				F7313A1722F3C2CE0014FF99 /* MapViewController.swift in Sources */,
+				F7313A1222F3BF8C0014FF99 /* MapViewModel.swift in Sources */,
 				F73139E522F3B5AF0014FF99 /* AppDelegate.swift in Sources */,
+				F7313A1922F3C3000014FF99 /* LocationAnnotation.swift in Sources */,
+				F7313A1022F3BEC80014FF99 /* APIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,6 +291,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F73139FA22F3B5B10014FF99 /* LocationTests.swift in Sources */,
+				F7313A1422F3C0450014FF99 /* MapViewModelTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
