@@ -70,6 +70,7 @@
 		F7313A2522F3D4050014FF99 /* LocationListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationListTests.swift; sourceTree = "<group>"; };
 		F7313A2722F3D4E30014FF99 /* LocationsListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsListTableViewController.swift; sourceTree = "<group>"; };
 		F7313A2922F3D5B60014FF99 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		F7313A2B22F3E33D0014FF99 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +95,7 @@
 		F73139D822F3B5AF0014FF99 = {
 			isa = PBXGroup;
 			children = (
+				F7313A2B22F3E33D0014FF99 /* README.md */,
 				F73139E322F3B5AF0014FF99 /* CochlearCodingChallenge */,
 				F73139F822F3B5B10014FF99 /* CochlearCodingChallengeTests */,
 				F73139E222F3B5AF0014FF99 /* Products */,
@@ -475,6 +477,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = CochlearCodingChallenge/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -492,6 +495,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = CochlearCodingChallenge/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
