@@ -116,7 +116,9 @@ extension MapViewController: MKMapViewDelegate {
     
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
         guard let anno = view.annotation as? LocationAnnotation else { return }
-        // TODO: go to location detail view controller
+        let locationViewModel = LocationDetailViewModel(storage: viewModel.storage, location: anno.location)
+        let viewController = LocationDetailViewController(viewModel: locationViewModel)
+        navigationController?.pushViewController(viewController, animated: true)
     }
     
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {

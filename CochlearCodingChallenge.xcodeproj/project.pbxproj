@@ -23,6 +23,9 @@
 		F7313A1722F3C2CE0014FF99 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7313A1622F3C2CE0014FF99 /* MapViewController.swift */; };
 		F7313A1922F3C3000014FF99 /* LocationAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7313A1822F3C3000014FF99 /* LocationAnnotation.swift */; };
 		F7313A1C22F3C9220014FF99 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7313A1B22F3C9220014FF99 /* MapKit.framework */; };
+		F7313A1E22F3CCFE0014FF99 /* LocationDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7313A1D22F3CCFE0014FF99 /* LocationDetailViewModel.swift */; };
+		F7313A2022F3CDF50014FF99 /* LocationDetailTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7313A1F22F3CDF50014FF99 /* LocationDetailTests.swift */; };
+		F7313A2222F3CE760014FF99 /* LocationDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7313A2122F3CE760014FF99 /* LocationDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +59,9 @@
 		F7313A1622F3C2CE0014FF99 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		F7313A1822F3C3000014FF99 /* LocationAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationAnnotation.swift; sourceTree = "<group>"; };
 		F7313A1B22F3C9220014FF99 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		F7313A1D22F3CCFE0014FF99 /* LocationDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailViewModel.swift; sourceTree = "<group>"; };
+		F7313A1F22F3CDF50014FF99 /* LocationDetailTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailTests.swift; sourceTree = "<group>"; };
+		F7313A2122F3CE760014FF99 /* LocationDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +126,7 @@
 				F73139FB22F3B5B10014FF99 /* Info.plist */,
 				F7313A0B22F3BB460014FF99 /* data.json */,
 				F7313A1322F3C0450014FF99 /* MapViewModelTest.swift */,
+				F7313A1F22F3CDF50014FF99 /* LocationDetailTests.swift */,
 			);
 			path = CochlearCodingChallengeTests;
 			sourceTree = "<group>";
@@ -138,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				F7313A1122F3BF8C0014FF99 /* MapViewModel.swift */,
+				F7313A1D22F3CCFE0014FF99 /* LocationDetailViewModel.swift */,
 			);
 			path = "View model";
 			sourceTree = "<group>";
@@ -155,6 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				F7313A1622F3C2CE0014FF99 /* MapViewController.swift */,
+				F7313A2122F3CE760014FF99 /* LocationDetailViewController.swift */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -277,7 +286,9 @@
 				F73139E722F3B5AF0014FF99 /* ViewController.swift in Sources */,
 				F7313A0822F3B7B80014FF99 /* Location.swift in Sources */,
 				F7313A0A22F3B8BF0014FF99 /* LocationStorage.swift in Sources */,
+				F7313A2222F3CE760014FF99 /* LocationDetailViewController.swift in Sources */,
 				F7313A0E22F3BB8D0014FF99 /* Decoder.swift in Sources */,
+				F7313A1E22F3CCFE0014FF99 /* LocationDetailViewModel.swift in Sources */,
 				F7313A1722F3C2CE0014FF99 /* MapViewController.swift in Sources */,
 				F7313A1222F3BF8C0014FF99 /* MapViewModel.swift in Sources */,
 				F73139E522F3B5AF0014FF99 /* AppDelegate.swift in Sources */,
@@ -290,6 +301,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7313A2022F3CDF50014FF99 /* LocationDetailTests.swift in Sources */,
 				F73139FA22F3B5B10014FF99 /* LocationTests.swift in Sources */,
 				F7313A1422F3C0450014FF99 /* MapViewModelTest.swift in Sources */,
 			);
