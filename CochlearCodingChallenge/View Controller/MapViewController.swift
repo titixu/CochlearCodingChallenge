@@ -101,6 +101,10 @@ class MapViewController: UIViewController {
 // MARK: - Annotation
 extension MapViewController: MKMapViewDelegate {
     
+    private var removeTitle: String {
+        return "Remove"
+    }
+    
     func displayLocations(_ locations: [Location]) {
         mapView.removeAnnotations(mapView.annotations)
         let annotations = generateAnnotations(locations)
@@ -116,10 +120,18 @@ extension MapViewController: MKMapViewDelegate {
     // delegate
     
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
-        guard let anno = view.annotation as? LocationAnnotation else { return }
-        let locationViewModel = LocationDetailViewModel(storage: viewModel.storage, location: anno.location)
-        let viewController = LocationDetailViewController(viewModel: locationViewModel)
-        navigationController?.pushViewController(viewController, animated: true)
+        guard let anno = view.annotation as? LocationAnnotation,
+        let button = control as? UIButton else { return }
+        
+        if button.buttonType == .infoDark {
+            let locationViewModel = LocationDetailViewModel(storage: viewModel.storage, location: anno.location)
+            let viewController = LocationDetailViewController(viewModel: locationViewModel)
+            navigationController?.pushViewController(viewController, animated: true)
+        } else if button.title(for: .normal) == removeTitle {
+            viewModel.remove(anno.location)
+            mapView.removeAnnotation(anno)
+        }
+        
     }
     
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
@@ -128,7 +140,13 @@ extension MapViewController: MKMapViewDelegate {
             else { return MKAnnotationView() }
         view.canShowCallout = true
         view.animatesDrop = true
-        view.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
+        
+        view.leftCalloutAccessoryView = UIButton(type: .infoDark)
+        
+        let removeButton = UIButton(type: .roundedRect)
+        removeButton.frame = CGRect(x: 0.0, y: 0.0, width: 60.0, height: view.bounds.height)
+        removeButton.setTitle(removeTitle, for: .normal)
+        view.rightCalloutAccessoryView = removeButton
         return view
     }
     

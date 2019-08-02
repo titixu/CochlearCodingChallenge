@@ -71,6 +71,12 @@ class LocationTests: XCTestCase {
 
 // Moc the storage to use in-memory storage
 class LocationStorageMoc: LocationsStorage {
+    func remove(_ location: Location) {
+        locations.removeAll {
+            $0 == location
+        }
+    }
+    
     var locations: [Location] = []
     
     func removeAll() {
@@ -96,9 +102,13 @@ class storageTests: XCTestCase {
         
         // test adding a location
         
-        let location = Location(name: "Test1", lat: 12345, lng: -12345, note: "Test note", locationType: .user)
+        let location1 = Location(name: "Test1", lat: 12345, lng: -12345, note: "Test note", locationType: .user)
+        let location2 = Location(name: "test2", lat: 2, lng: 321, note: nil, locationType: .user)
+        let location3 = Location(name: "test3", lat: 3, lng: 321, note: nil, locationType: .user)
+        let location4 = Location(name: "test4", lat: 4, lng: 321, note: nil, locationType: .user)
+
         
-        locationsStorage.add(location)
+        locationsStorage.add(location1)
         locations = locationsStorage.locations
         XCTAssertEqual(locations.count, 1)
         XCTAssertEqual(locations.first!.name, "Test1")
@@ -106,6 +116,22 @@ class storageTests: XCTestCase {
         XCTAssertEqual(locations.first!.lng, -12345)
         XCTAssertEqual(locations.first!.note, "Test note")
         XCTAssertEqual(locations.first!.locationType, .user)
+        
+        locationsStorage.add(location2)
+        locationsStorage.add(location3)
+        locationsStorage.add(location4)
+        XCTAssertEqual(locationsStorage.locations.count, 4)
+        
+        let locationToRemove = Location(name: "test4", lat: 4, lng: 321, note: nil, locationType: .user)
+        locationsStorage.remove(locationToRemove)
+        XCTAssertEqual(locationsStorage.locations.count, 3)
+        
+        let last = locationsStorage.locations.last!
+        XCTAssertEqual(last.name, "test3")
+        XCTAssertEqual(last.lat, 3)
+        XCTAssertEqual(last.lng, 321)
+        XCTAssertEqual(last.note, nil)
+        XCTAssertEqual(last.locationType, .user)
     }
     
 }

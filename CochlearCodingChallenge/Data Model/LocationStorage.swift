@@ -17,6 +17,8 @@ protocol LocationsStorage {
     func removeAll() -> Void
     // append a location into the storage
     func add(_ location: Location)
+    
+    func remove(_ location: Location)
 }
 
 // Use UserDefaults as location storage for this project
@@ -45,6 +47,14 @@ extension UserDefaults: LocationsStorage {
     func add(_ location: Location) {
         var updatedLocations = locations
         updatedLocations.append(location)
+        save(updatedLocations)
+    }
+    
+    func remove(_ location: Location) {
+        var updatedLocations = locations
+        updatedLocations.removeAll {
+            $0 == location
+        }
         save(updatedLocations)
     }
     

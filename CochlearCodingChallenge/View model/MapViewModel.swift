@@ -23,6 +23,10 @@ class MapViewModel {
         storage.add(location)
     }
     
+    func remove(_ location: Location) {
+        storage.remove(location)
+    }
+    
     init(apiClient: API, storage: LocationsStorage, onComplete: @escaping ([Location])-> Void) {
         self.apiClient = apiClient
         self.storage = storage
