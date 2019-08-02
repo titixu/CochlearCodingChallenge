@@ -12,7 +12,11 @@
 		F73139EA22F3B5AF0014FF99 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F73139E822F3B5AF0014FF99 /* Main.storyboard */; };
 		F73139EC22F3B5B10014FF99 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F73139EB22F3B5B10014FF99 /* Assets.xcassets */; };
 		F73139EF22F3B5B10014FF99 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F73139ED22F3B5B10014FF99 /* LaunchScreen.storyboard */; };
-		F73139FA22F3B5B10014FF99 /* CochlearCodingChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73139F922F3B5B10014FF99 /* CochlearCodingChallengeTests.swift */; };
+		F73139FA22F3B5B10014FF99 /* LocationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73139F922F3B5B10014FF99 /* LocationTests.swift */; };
+		F7313A0822F3B7B80014FF99 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7313A0722F3B7B80014FF99 /* Location.swift */; };
+		F7313A0A22F3B8BF0014FF99 /* LocationStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7313A0922F3B8BF0014FF99 /* LocationStorage.swift */; };
+		F7313A0C22F3BB460014FF99 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = F7313A0B22F3BB460014FF99 /* data.json */; };
+		F7313A0E22F3BB8D0014FF99 /* Decoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7313A0D22F3BB8D0014FF99 /* Decoder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,8 +38,12 @@
 		F73139EE22F3B5B10014FF99 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F73139F022F3B5B10014FF99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F73139F522F3B5B10014FF99 /* CochlearCodingChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CochlearCodingChallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F73139F922F3B5B10014FF99 /* CochlearCodingChallengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CochlearCodingChallengeTests.swift; sourceTree = "<group>"; };
+		F73139F922F3B5B10014FF99 /* LocationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTests.swift; sourceTree = "<group>"; };
 		F73139FB22F3B5B10014FF99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F7313A0722F3B7B80014FF99 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		F7313A0922F3B8BF0014FF99 /* LocationStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationStorage.swift; sourceTree = "<group>"; };
+		F7313A0B22F3BB460014FF99 /* data.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
+		F7313A0D22F3BB8D0014FF99 /* Decoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Decoder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +85,9 @@
 		F73139E322F3B5AF0014FF99 /* CochlearCodingChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				F7313A0622F3B5D50014FF99 /* Helper */,
+				F7313A0522F3B5CC0014FF99 /* View model */,
+				F7313A0422F3B5C00014FF99 /* Data Model */,
 				F73139E422F3B5AF0014FF99 /* AppDelegate.swift */,
 				F73139E622F3B5AF0014FF99 /* ViewController.swift */,
 				F73139E822F3B5AF0014FF99 /* Main.storyboard */,
@@ -90,10 +101,35 @@
 		F73139F822F3B5B10014FF99 /* CochlearCodingChallengeTests */ = {
 			isa = PBXGroup;
 			children = (
-				F73139F922F3B5B10014FF99 /* CochlearCodingChallengeTests.swift */,
+				F73139F922F3B5B10014FF99 /* LocationTests.swift */,
 				F73139FB22F3B5B10014FF99 /* Info.plist */,
+				F7313A0B22F3BB460014FF99 /* data.json */,
 			);
 			path = CochlearCodingChallengeTests;
+			sourceTree = "<group>";
+		};
+		F7313A0422F3B5C00014FF99 /* Data Model */ = {
+			isa = PBXGroup;
+			children = (
+				F7313A0722F3B7B80014FF99 /* Location.swift */,
+				F7313A0922F3B8BF0014FF99 /* LocationStorage.swift */,
+			);
+			path = "Data Model";
+			sourceTree = "<group>";
+		};
+		F7313A0522F3B5CC0014FF99 /* View model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "View model";
+			sourceTree = "<group>";
+		};
+		F7313A0622F3B5D50014FF99 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				F7313A0D22F3BB8D0014FF99 /* Decoder.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,6 +223,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7313A0C22F3BB460014FF99 /* data.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,6 +235,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F73139E722F3B5AF0014FF99 /* ViewController.swift in Sources */,
+				F7313A0822F3B7B80014FF99 /* Location.swift in Sources */,
+				F7313A0A22F3B8BF0014FF99 /* LocationStorage.swift in Sources */,
+				F7313A0E22F3BB8D0014FF99 /* Decoder.swift in Sources */,
 				F73139E522F3B5AF0014FF99 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -206,7 +246,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F73139FA22F3B5B10014FF99 /* CochlearCodingChallengeTests.swift in Sources */,
+				F73139FA22F3B5B10014FF99 /* LocationTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
