@@ -137,7 +137,10 @@ extension MapViewController: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         guard let anno = annotation as? LocationAnnotation,
             let view = mapView.dequeueReusableAnnotationView(withIdentifier: annotationViewIdentifier, for: anno) as? MKPinAnnotationView
-            else { return MKAnnotationView() }
+            else {
+                // let system to handle other annotations such as the blue dot
+                return nil
+        }
         view.canShowCallout = true
         view.animatesDrop = true
         

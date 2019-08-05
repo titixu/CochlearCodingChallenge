@@ -14,7 +14,7 @@
 - Locations can only be removed from the Map View Controller by tapping the "Remove" button from the Annotation Callout view
 
 ## Bugs
-- Somehow, the user location indicator ( the blue dot ) is not showing in the map, but the user location is detected with no problem. 
+~~Somehow, the user location indicator ( the blue dot ) is not showing in the map, but the user location is detected with no problem.~~ 
 
 ## Product requirements 
 
